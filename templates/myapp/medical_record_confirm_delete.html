@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Delete Medical Record</h1>
+  <p>Are you sure you want to delete the following medical record?</p>
+  <p><strong>Patient:</strong> {{ object.patient }}</p>
+  <p><strong>Date:</strong> {{ object.date }}</p>
+  <p><strong>Diagnosis:</strong> {{ object.diagnosis }}</p>
+  <p><strong>Notes:</strong> {{ object.notes }}</p>
+  <p><strong>Prescription:</strong> {{ object.prescription }}</p>
+
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">Yes, delete it</button>
+    <a href="{% url 'myapp:patient_detail' pk=object.patient.pk %}">No, take me back</a>
+  </form>
+{% endblock %}

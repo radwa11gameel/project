@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Patient information -->
+        <h2>{{ patient.user.first_name }} {{ patient.user.last_name }}</h2>
+        <p><strong>age:</strong> {{ patient.age }}</p>
+        <p><strong>Address:</strong> {{ patient.address }}</p>
+        <p><strong>phone number:</strong> {{ patient.phonenumber}}</p>
+        <p><strong>gender:</strong> {{ patient.gender }}</p>
+        <p><strong>medical photo:</strong> {{ patient.medicalphoto.url }}</p>
+        <p><strong>classification:</strong>{{patint.classification}}</p>
+        <p><strong>prediction:</strong>{{patint.prediction}}</p>
+      </div>
+      <div class="col-md-6">
+        <!-- Doctor information -->
+        <h2>Doctor Information</h2>
+        {% for doctor in patient.doctors.all %}
+          <h4>{{ doctor.user.first_name }} {{ doctor.user.last_name }}</h4>
+         
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  
+
+{% endblock content %}
+
+

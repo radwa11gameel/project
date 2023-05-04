@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>{{ doctor.user.get_full_name }}</h1>
+  <ul>
+    <li><strong>age:</strong> {{ doctor.age }}</li>
+    <li><strong>Address:</strong> {{ doctor.address }}</li>
+    <li><strong>phone number:</strong> {{ doctor.phonenumber}}</li>
+    <li><strong>gender:</strong> {{ doctor.gender }}</li>
+    <li><strong>profile Photo</strong><img width='250' src='{{ doctor.profile_photo.url }}'></li>
+    
+
+  </ul>
+  
+
+  <h2>Patients:</h2>
+  <ul>
+    {% for patient in doctor.patients.all %}
+      <li><a href="{% url 'myapp:patient_detail' patient.pk %}">{{ patient.user.get_full_name }}</a></li>
+    {% empty %}
+      <li>No patients found.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

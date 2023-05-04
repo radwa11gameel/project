@@ -1,0 +1,27 @@
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Patient information -->
+        <h2>{{ patient.user.first_name }} {{ patient.user.last_name }}</h2>
+        <p><strong>age:</strong> {{ patient.age }}</p>
+        <p><strong>Address:</strong> {{ patient.address }}</p>
+        <p><strong>phone number:</strong> {{ patient.phonenumber}}</p>
+        <p><strong>gender:</strong> {{ patient.gender }}</p>
+        <p><strong>medical photo:</strong> {{ patient.medicalphoto.url }}</p>
+        <p><strong>Classification:</strong> {{ patient.classification }}</p>
+        <p><strong>Prediction:</strong> {{ patient.prediction }}</p>
+        
+      </div>
+      <div class="col-md-6">
+        <!-- Doctor information -->
+        <h2>Doctor Information</h2>
+        <!-- {% for doctor in patient.doctors.all %}
+          <h4>{{ doctor.user.first_name }} {{ doctor.user.last_name }}</h4>
+          <p><strong>Specialty:</strong> {{ doctor.specialty }}</p>
+          <p><strong>Medical License Number:</strong> {{ doctor.medical_license_number }}</p>
+        {% endfor %} -->
+      </div>
+    </div>
+  </div>

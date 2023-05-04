@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Patient Details</h1>
+  <ul>
+    <li><strong>age:</strong> {{ patient.age }}</li>
+    <li><strong>Address:</strong> {{ patient.address }}</li>
+    <li><strong>phone number:</strong> {{ patient.phonenumber}}</li>
+    <li><strong>gender:</strong> {{ patient.gender }}</li>
+    <li><strong>Medical Photo</strong><img width='250' src='{{ patient.medicalphoto.url }}'></li>
+    <li><strong>Classification</strong>{{patient.classification}}
+    <li><strong>prediction</strong>{{patient.prediction}}
+  </ul>
+{% endblock %}

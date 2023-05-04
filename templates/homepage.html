@@ -1,0 +1,40 @@
+{% block content %}
+
+{% for product in products %}
+<div class="container">
+    <div class="row">
+
+
+        <div class="col">
+            <img src="{{ product.image.url }}" class="float-left" alt="{{ product }}" height="200px" width="100px">
+        </div>
+
+        <div class="col">
+
+            <a href="{% url 'detail' product.id %}">{{ product.brand.brandName }} {{ product.name }}</a> <br>
+            
+
+
+
+            <br>
+
+            <ul>
+                
+                <li>{{ product.screen }} inch</li>
+            </ul>
+
+        </div>
+
+
+        <div class="col">
+
+            {{ product.price }}
+        </div>
+    </div>
+    <br>
+
+</div>
+
+{% endfor %}
+
+{% endblock %}

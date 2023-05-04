@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Delete Doctor</h1>
+  <p>Are you sure you want to delete "{{ doctor }}"?</p>
+  <form action="{% url 'myapp:doctor_delete' doctor.id %}" method="POST">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+    <a href="{% url 'myapp:doctor_detail' doctor.id %}">Cancel</a>
+  </form>
+{% endblock %}

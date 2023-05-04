@@ -1,0 +1,34 @@
+##AUTHENTICATION
+#Done -to Get All users and Create users --->  /users/
+
+#Done -to ge the user logged in --->  /users/me/
+
+#Done - to confirm user ( this will send email contain url to confirm user ) --->  /users/confirm/
+
+#Done - if email didn't send the url or expiered token you can resend email with new token --->  /users/resend_activation/
+
+#Done - if you need to set ( Change Password ) --->  /users/set_password/
+
+#Done - if you need to reset password "Forget Password" ( this will send email to get the url with token to reset password ) --->  /users/reset_password/
+
+#Done - to confirm reset password --->  /users/reset_password_confirm/
+
+#Done - if you need to change username --->  /users/set_username/
+
+#Done - if user forget username this link will send email to user with link to reset the username --->  /users/reset_username/
+----------------------------------------------------------------------------
+ ##DOCTOR profile##
+ #Done -DOCTOR's list(view)---(doctors/)
+ #Done -DOCTOR detail----(doctors/<int:pk>)
+ #Done -create user(add DOCTOR)----(register)
+ #Done -edit DOCTOR(save edits)---(doctors/<int:pk>(doctor id)/edit/)
+ #Done -delete DOCTOR---(doctors/<int:pk>/delete/)
+
+ ##patient##
+ #Done -patient's list(view)---(patients/)
+ #Done -patient detail---(patients/<int:pk>/)
+ #Done -add patient---(patients/)
+ #Done -edit patient(save edits)---(patients/<int:pk>(patient id)/edit/)
+ #Done -delete patient---(patients/<int:pk>/delete/)
+ -classification (#Done search_inbox)
+ -prediction (#Done search_inbox)
